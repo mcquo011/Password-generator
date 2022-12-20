@@ -1,38 +1,47 @@
 let generateBtn = document.querySelector("#generate");
 let passwordField = document.querySelector("#password");
 
+
 // Write password to the #password input
 function writePassword() {
-  // Limiting password length from 8-128
-  let length = Number(
-    prompt("How many characters would you like your password to be?")
-  );
-  while (length < 8 || length > 128)
-    length = Number(
-      prompt(
-        "Length must be 8-128 characters. How many characters would you like your password to be?"
-      )
+  // Prompt the user for the password length
+  let length = Number(prompt("Enter the password length (8-128 characters):"));
+
+  // Check if the user entered a valid password length
+  if (length >= 8 && length <= 128) {
+    // Prompt the user for the character sets to include in the password
+    let uppercase = confirm("Would you like to have uppercase letters?");
+    let lowercase = confirm("Would you like to have lowercase letters?");
+    let numbers = confirm("Would you like to have numbers?");
+    let symbols = confirm("Would you like to have special characters?");
+
+    // Generate a password
+    let password = generatePassword(
+      length,
+      uppercase,
+      lowercase,
+      numbers,
+      symbols
     );
 
-  let uppercase = confirm("Would you like to have uppercase letters?");
-  let lowercase = confirm("Would you like to have lowercase letters?");
-  let numbers = confirm("would you like to have numbers?");
-  let symbols = confirm("would you like to have special characters?");
-
-  // Generate a password
-  let password = generatePassword(uppercase, lowercase, numbers, symbols);
-
-  // Display the generated password in an alert
-  alert(`Your password is: ${password}`);
-
-  // Update the password field with the generated password
-  passwordField.value = password;
+    // Update the password field with the generated password
+    passwordField.value = password;
+  } else {
+    // The user entered an invalid password length
+    alert("Please enter a valid password length (8-128 characters)");
+  }
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// Generate a password
+function generatePassword(length, uppercase, lowercase, numbers, symbols) {
+  // Check if at least one character set is selected
+  if (uppercase || lowercase || numbers || symbols) {
+    // At least one of the arguments is true
+  } else {
+    alert("Select at least one character set!");
+    // All of the arguments are false
+  }
 
-function generatePassword(uppercase, lowercase, numbers, symbols) {
   // Define a string containing all possible uppercase letters, lowercase letters, numbers, and symbols
   let characterSet = "";
   if (uppercase) characterSet += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -54,3 +63,6 @@ function generatePassword(uppercase, lowercase, numbers, symbols) {
   // Return the generated password
   return password;
 }
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
