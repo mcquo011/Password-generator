@@ -26,7 +26,7 @@ Starter code from UMN Bootcamp Class Repo.
 
 Image showing responsive layout
 
-![Alt text](./assets/pass-gen.png?raw=true "Screenshot of password generator application")
+![Alt text](./assets/pass-gen.png?raw=true "Screenshot of Password Generator Application")
 
 ## License
 

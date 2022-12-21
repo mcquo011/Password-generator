@@ -38,9 +38,6 @@ function generatePassword() {
       characterSet += symbolsChar;
     }
     if (uppercase || lowercase || numbers || symbols) {
-    
-
-    // Define a string containing all possible uppercase letters, lowercase letters, numbers, and symbols
 
     // Initialize the password as an empty string
     let password = "";
@@ -53,12 +50,10 @@ function generatePassword() {
 
     // Return the generated password
     return password;
-    // Update the password field with the generated password
-    // At least one of the arguments is true
+
   } else {
   alert("Select at least one character set!");
   generatePassword()
-  // All of the arguments are false
 
 }
 alert("You must choose a password length between 8-128")
