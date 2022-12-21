@@ -1,15 +1,16 @@
 # Password-generator-
+
 # Module 3 Challenge
 
 ## Random Password Generator
 
 This web applications purpose is to create a random password for users.
 
-The motivation behind this project was to create an acessible site for anyone to generate a random password by following simple propmts. 
+The motivation behind this project was to create an acessible site for anyone to generate a random password by following simple propmts.
 
 ## Installation
 
-Cloned this app down from GitHub class Repo using git clone. 
+Cloned this app down from GitHub class Repo using git clone.
 
 ## Usage
 
@@ -19,13 +20,13 @@ Link to application: https://github.com/mcquo011/Portfolio
 
 ## Contributing
 
-Starter code from UMN Bootcamp Class Repo. 
+Starter code from UMN Bootcamp Class Repo.
 
 ## Screenshot
 
 Image showing responsive layout
 
-![Alt text](/assets/pass-gen.png?raw=true "Screenshot of password generator application")
+![Alt text](./assets/pass-gen.png?raw=true "Screenshot of password generator application")
 
 ## License
 
