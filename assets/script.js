@@ -6,7 +6,6 @@ let numbersChar = "0123456789";
 let symbolsChar = "!@#$%^&*()_+-=[]{}|;':,.<>/?`~";
 
 
-// Write password to the #password input
 function writePassword() {
   // Prompt the user for the password length
  let password = generatePassword();
@@ -53,11 +52,10 @@ function generatePassword() {
 
   } else {
   alert("Select at least one character set!");
-  generatePassword()
-
-}
-alert("You must choose a password length between 8-128")
-generatePassword()
+  return;
+  }
+} else {
+  alert("You must choose a password length between 8-128")
 } }
 
 
